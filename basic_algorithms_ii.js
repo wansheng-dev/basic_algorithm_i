@@ -1,6 +1,6 @@
-// #1 Array With Only Odd Numbers. (Loop & Recursive)
+// #7 Array With Only Odd Numbers. (Loop & Recursive)
 
-arryOddUpTo255 = () => {
+const arryOddUpTo255 = () => {
   let arr = [];
   for (let i = 1; i <= 255; i += 2){
     arr.push(i);
@@ -8,7 +8,7 @@ arryOddUpTo255 = () => {
   console.log(arr);
 }
 
-rArrayOddUpTo255 = (arr = [], i = 1) => {
+const rArrayOddUpTo255 = (arr = [], i = 1) => {
   if (i <= 255){
     arr.push(i);
     i+=2;
@@ -18,9 +18,9 @@ rArrayOddUpTo255 = (arr = [], i = 1) => {
 }
 
 
-// #2 Greater Than Y. (Loop & Recursive)
+// #8 Greater Than Y. (Loop & Recursive)
 
-greaterThanY = (arr, y) => {
+const greaterThanY = (arr, y) => {
   let num = 0;
   for (let i = 0; i < arr.length ; i++){
     if (arr[i] > y){
@@ -30,7 +30,7 @@ greaterThanY = (arr, y) => {
   return num;
 }
 
-rGreaterThanY = (arr, y, num = 0, i = 0) => {
+const rGreaterThanY = (arr, y, num = 0, i = 0) => {
   if (i >= arr.length){
     return num;
   }
@@ -42,16 +42,16 @@ rGreaterThanY = (arr, y, num = 0, i = 0) => {
 }
 
 
-// #3 Square the Array Values (Loop & Recursive)
+// #9 Square the Array Values (Loop & Recursive)
 
-squareValues = arr => {
+const squareValues = arr => {
   for (let i = 0; i < arr.length; i++){
     arr[i] *= arr[i];
   }
   return arr;
 }
 
-rSquareValues = (arr, i = 0) => {
+const rSquareValues = (arr, i = 0) => {
   if (i >= arr.length){
     return arr;
   }
@@ -61,9 +61,9 @@ rSquareValues = (arr, i = 0) => {
 }
 
 
-// #4 Eliminate Negative Numbers (Loop & Recursive)
+// #10 Eliminate Negative Numbers (Loop & Recursive)
 
-eliminateNegatives = arr => {
+const eliminateNegatives = arr => {
   for (let i = 0; i < arr.length; i++){
     if (arr[i] < 0){
       arr[i] = 0;
@@ -72,7 +72,7 @@ eliminateNegatives = arr => {
   console.log(arr);
 }
 
-rEliminateNegatives = (arr, i = 0) => {
+const rEliminateNegatives = (arr, i = 0) => {
   if (i >= arr.length){
     return arr;
   }
@@ -84,9 +84,9 @@ rEliminateNegatives = (arr, i = 0) => {
 }
 
 
-// #5 Array Max, Min, and Average (Loop & Recursive)
+// #11 Array Max, Min, and Average (Loop & Recursive)
 
-maxMinAvg = arr => {
+const maxMinAvg = arr => {
   if (arr.length != 0){
     let max = arr[0];
     let min = arr[0];
@@ -103,7 +103,7 @@ maxMinAvg = arr => {
   }
 }
 
-rMaxMinAvg = (arr, max = 0, min = 0, sum = 0, i = 0) => {
+const rMaxMinAvg = (arr, max = 0, min = 0, sum = 0, i = 0) => {
   if (arr.length <= 1){
     return arr[0], arr[0], arr[0];
   }
@@ -121,9 +121,9 @@ rMaxMinAvg = (arr, max = 0, min = 0, sum = 0, i = 0) => {
 }
 
 
-// #6 Shifting the values in the array (Loop & Recursive)
+// #12 Shifting the values in the array (Loop & Recursive)
 
-shiftFront = arr => {
+const shiftFront = arr => {
   for (let i = 0; i < arr.length - 1; i++){
     arr[i] = arr[i + 1]
   }
@@ -131,7 +131,7 @@ shiftFront = arr => {
   return arr;
 }
 
-rShiftFront = (arr, i = 0) => {
+const rShiftFront = (arr, i = 0) => {
   if (i > arr.length - 1){
     arr[arr.length - 1] = 0;
     return arr;

@@ -1,12 +1,12 @@
 // #1 Print 1-255 (Loop & Recursive)
 
-print1To255 = () => {
+const print1To255 = () => {
   for(let i = 1; i <= 255 ; i++){
     console.log(i);
   }
 }
 
-rPrint1To255 = (i = 1) => {
+const rPrint1To255 = (i = 1) => {
   if(i<=255){
     console.log(i);
     i++;
@@ -17,13 +17,13 @@ rPrint1To255 = (i = 1) => {
 
 // #2 Print Odd Numbers 1-100 (Loop & Recursive)
 
-printOddUpTo100 = () => {
+const printOddUpTo100 = () => {
   for (let i = 1; i <= 100; i+=2){
     console.log(i);
   }
 }
 
-rPrintOddUpTo100 = (i=1) => {
+const rPrintOddUpTo100 = (i=1) => {
   if (i <= 100){
     console.log(i);
     i += 2;
@@ -34,7 +34,7 @@ rPrintOddUpTo100 = (i=1) => {
 
 // #3 Print Sum from 1 to 5000 (Loop & Recursive)
 
-printSumUpTo5000 = () => {
+const printSumUpTo5000 = () => {
   let sum = 0;
   for (let i = 1; i <= 5000; i++){
     sum += i;
@@ -42,7 +42,7 @@ printSumUpTo5000 = () => {
   console.log(sum);
 }
 
-rPrintSumUpTo5000 = (i = 1, sum = 0) => {
+const rPrintSumUpTo5000 = (i = 1, sum = 0) => {
   if (i <= 5000){
     sum += i;
     i ++
@@ -54,13 +54,13 @@ rPrintSumUpTo5000 = (i = 1, sum = 0) => {
 
 // #4 Iterating Through the Array and Print Each Element (Loop & Recursive)
 
-printElement = arr => {
+const printElement = arr => {
   for (let i = 0; i < arr.length; i++){
     console.log(arr[i]);
   }
 }
 
-rPrintElement = (arr, i = 0) => {
+const rPrintElement = (arr, i = 0) => {
   if (i < arr.length){
     console.log(arr[i]);
     i ++;
@@ -71,7 +71,7 @@ rPrintElement = (arr, i = 0) => {
 
 // #5 Find and Print Array Max (Loop & Recursive)
 
-findMax = arr => {
+const findMax = arr => {
   let max = arr[0];
   for (let i = 1; i < arr.length; i++){
     if (max < arr[i]){
@@ -84,7 +84,7 @@ findMax = arr => {
 
 // #6 Find and Print Array Average
 
-findAverage = arr => {
+const findAverage = arr => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++){
     sum += arr[i];
@@ -92,7 +92,7 @@ findAverage = arr => {
   console.log(sum/arr.length);
 }
 
-rFindAverage = (arr, sum = 0, i = 0) => {
+const rFindAverage = (arr, sum = 0, i = 0) => {
   if (i < arr.length){
     sum += arr[i];
     i ++
